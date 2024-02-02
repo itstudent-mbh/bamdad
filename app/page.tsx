@@ -2,7 +2,7 @@ import Tabs from "@/components/Tabs";
 import Image from "next/image";
 import items from "@/data/tabs";
 import LearniaContent from "@/components/LearniaContent";
-import Slider from "@/components/slider/Slider";
+import Slider from "@/components/Slider";
 import slider from "@/data/slider";
 
 export default function Home() {

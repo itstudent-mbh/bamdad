@@ -1,8 +1,6 @@
 const items = [
   {
     title: "آموزش برنامه نویسی",
-    start_color: "orange-400",
-    end_color: "orange-300",
     icon: "/img/icons/Group.svg",
     content_type: "list",
     content: [
@@ -30,8 +28,6 @@ const items = [
   },
   {
     title: "مشاوره",
-    start_color: "violet-500",
-    end_color: "violet-400",
     icon: "/img/icons/language.svg",
     content_type: "list",
     content: [
@@ -58,8 +54,6 @@ const items = [
   },
   {
     title: "آموزش زبان",
-    start_color: "pink-500",
-    end_color: "pink-400",
     icon: "/img/icons/Group.svg",
     content_type: "list",
     content: [

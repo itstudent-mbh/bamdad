@@ -1,13 +1,12 @@
 "use client";
 import { useState } from "react";
 
-export default function Tabs({ items }) {
+function Tabs({ items }) {
   let [current, setCurrent] = useState(0);
 
   let selectTab = (index) => {
     if (current != index) setCurrent(index);
   };
-
   return (
     <div className="max-w-3xl h-[242px] mx-auto -mt-20">
       <div className="h-full mt-24 justify-center items-start gap-8 inline-flex flex-col">
@@ -22,13 +21,18 @@ export default function Tabs({ items }) {
                 }}
               >
                 <div
-                  className={`p-4 bg-gradient-to-l from-${
-                    item.start_color
-                  } to-${item.end_color}  shadow-${
-                    item.start_color
-                  } transition-all duration-500 w-full flex-col justify-center gap-3 inline-flex cursor-pointer rounded-2xl  shadow-[0_20px_50px_-30px] ${
+                  className={`transition-all duration-500 w-full ${
                     current === index ? `scale-110 -translate-y-3 -mb-10` : ``
-                  }`}
+                  }  p-4 bg-gradient-to-l 
+                  ${(() => {
+                    if (index === 0) {
+                      return `from-orange-300 to-orange-400 shadow-orange-400`;
+                    } else if (index === 1) {
+                      return `from-violet-400 to-violet-500 shadow-violet-500`;
+                    } else {
+                      return `from-pink-400 to-pink-500 shadow-pink-500`;
+                    }
+                  })()}  rounded-2xl  shadow-[0_20px_50px_-30px] flex-col justify-center gap-3 inline-flex cursor-pointer`}
                 >
                   <div className="w-12 h-12 p-1 bg-white bg-opacity-15 rounded-md">
                     <img src={item.icon} className="" alt="sds" />
@@ -66,3 +70,5 @@ export default function Tabs({ items }) {
     </div>
   );
 }
+
+export default Tabs;
